@@ -17,7 +17,7 @@ interface Skill {
   icon: string;
 }
 
-export default function Home(): JSX.Element {
+export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   const projects: Project[] = [

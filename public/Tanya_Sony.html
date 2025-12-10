@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanya Sony - Resume</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .no-print { display: none; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 60px;
+            background: #fff;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            color: #1e40af;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info {
+            font-size: 11px;
+            color: #555;
+            margin-top: 8px;
+        }
+        
+        .contact-info a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e40af;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+        
+        .company-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        
+        .location-date {
+            font-size: 11px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .job-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 8px;
+        }
+        
+        .job-duration {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            font-size: 11px;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+        
+        .summary {
+            font-size: 11px;
+            text-align: justify;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .education-item {
+            margin-bottom: 12px;
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        
+        .school-name {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        
+        .degree {
+            font-size: 11px;
+            color: #444;
+            margin-top: 3px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            font-size: 11px;
+        }
+        
+        .skill-category {
+            margin-bottom: 8px;
+        }
+        
+        .skill-category strong {
+            color: #1e40af;
+            display: block;
+            margin-bottom: 3px;
+        }
+        
+        .project-item {
+            margin-bottom: 15px;
+        }
+        
+        .project-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+        
+        .project-desc {
+            font-size: 11px;
+            margin-bottom: 5px;
+            line-height: 1.5;
+        }
+        
+        .tech-stack {
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .certifications {
+            font-size: 11px;
+        }
+        
+        .certifications li {
+            margin-bottom: 4px;
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        .print-btn:hover {
+            background: #1e40af;
+        }
+        
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn no-print" onclick="window.print()">📄 Print / Save as PDF</button>
+    
+    <div class="header">
+        <h1>TANYA SONY</h1>
+        <div class="contact-info">
+            <strong>Email:</strong> tanya.s140602@gmail.com | 
+            <strong>Phone:</strong> (+91) 9846944930<br>
+            <a href="https://github.com/TanyaSony" target="_blank">GitHub</a> | 
+            <a href="https://www.linkedin.com/in/tanya-sony-b337021b7/" target="_blank">LinkedIn</a> | 
+            <a href="https://tanya-portfolio-ts.vercel.app/" target="_blank">Portfolio</a>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p class="summary">
+            <strong>Junior Frontend Developer</strong> with <span class="highlight">2+ years of hands-on experience</span> building production-grade applications and mission-critical workflow products at Corestrat. Currently expanding into full-stack engineering with proven expertise in designing scalable front-end architectures, developing performant REST APIs, and deploying containerized services on Azure. Proficient in <strong>React, Next.js, TypeScript, Golang, Python</strong>, with strong knowledge of microservices, CI/CD pipelines, and secure authentication systems. Known for taking complete ownership of features—from architecture to deployment—and consistently delivering reliable, fast, and business-impactful solutions. Passionate about building end-to-end platforms that solve real-world problems at scale.
+        </p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
+        
+        <div class="job-header">
+            <div class="company-name">Corestrat</div>
+            <div class="location-date">Bangalore, India | Feb 2023 - Present</div>
+        </div>
+        
+        <div class="job-title">Frontend Developer</div>
+        <div class="job-duration">Aug 2023 - Present</div>
+        <ul>
+            <li><strong>Reduced UI defects by 90%</strong> by building and maintaining production-grade UI systems using React, Next.js, Material UI, and Tailwind CSS, significantly improving usability across major product modules</li>
+            <li>Developed <strong>reusable component libraries</strong>, interactive workflow builders, dynamic form engines, and role-based permission management systems deployed across multiple enterprise clients</li>
+            <li><strong>Led end-to-end development</strong> of DLA (Digital Lending Automation) platform and Rule.ai business rule engine from concept to production deployment</li>
+            <li>Designed and consumed <strong>REST APIs</strong>, integrated microservices architecture, and improved data flow reliability across critical business workflows</li>
+            <li>Created <strong>Python and Golang microservices</strong> for automation, data validation, and internal tooling, reducing manual operational effort by 40%</li>
+            <li>Implemented <strong>performance optimizations</strong> including memoization, lazy loading, pagination, code splitting, and Redux state management, reducing load times by 60% and improving Lighthouse scores to 90+</li>
+            <li>Owned <strong>deployment pipelines to Azure App Services</strong>, configured CI/CD workflows using GitHub Actions, managed environment configurations, and set up monitoring/alerting systems</li>
+            <li>Implemented <strong>SEO strategies and Google Tag Manager</strong> integration for analytics tracking, improving organic traffic by 35%</li>
+            <li>Collaborated cross-functionally with backend, QA, product, and design teams in an <strong>Agile/Scrum environment</strong>, participating in sprint planning, code reviews, and pair programming sessions</li>
+        </ul>
+        
+        <div class="job-title">Frontend Developer Intern</div>
+        <div class="job-duration">Feb 2023 - Aug 2023</div>
+        <ul>
+            <li>Built responsive UI components and implemented state management patterns for production applications</li>
+            <li>Collaborated with senior developers on architecture decisions and code optimization strategies</li>
+            <li>Participated in daily standups, sprint retrospectives, and contributed to engineering best practices documentation</li>
+        </ul>
+
+        <div style="margin-top: 20px;">
+            <div class="job-header">
+                <div class="company-name">NeST Cybersecurity</div>
+                <div class="location-date">Bangalore, India | Oct 2022</div>
+            </div>
+            
+            <div class="job-title">Cybersecurity Intern</div>
+            <div class="job-duration">1-month internship</div>
+            <ul>
+                <li>Learned fundamentals of <strong>network security, Linux hardening, vulnerability scanning</strong>, and threat analysis methodologies</li>
+                <li>Built proof-of-concept tools for <strong>password auditing and log-event monitoring</strong> using Python scripting</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <strong>Frontend Development:</strong>
+                React, Next.js, TypeScript, JavaScript ES6+, Redux, Tailwind CSS, Material UI, Framer Motion
+            </div>
+            <div class="skill-category">
+                <strong>Backend Development:</strong>
+                Golang (Gin/Fiber), Python (FastAPI), Node.js, REST APIs, Microservices Architecture
+            </div>
+            <div class="skill-category">
+                <strong>Databases:</strong>
+                MySQL, MongoDB, Redis, PostgreSQL
+            </div>
+            <div class="skill-category">
+                <strong>DevOps & Cloud:</strong>
+                Docker, GitHub Actions, Azure App Services, Azure DevOps, CI/CD Pipelines, Linux
+            </div>
+            <div class="skill-category">
+                <strong>Mobile Development:</strong>
+                Capacitor, React Native, Android Development
+            </div>
+            <div class="skill-category">
+                <strong>Other Technologies:</strong>
+                WebSockets, OAuth2/Auth0, JWT, SEO Optimization, Google Tag Manager, Git Version Control
+            </div>
+            <div class="skill-category" style="grid-column: 1 / -1;">
+                <strong>Soft Skills:</strong>
+                Team Collaboration, Technical Leadership, Problem-Solving, Adaptability, Communication, Attention to Detail, Agile/Scrum Methodology, Cross-Functional Coordination, Product Thinking, Fast Learner
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Key Projects</div>
+        
+        <div class="project-item">
+            <div class="project-title">DLA — Digital Lending Automation Platform</div>
+            <div class="project-desc">
+                Complete digital lending platform with web application and <strong>Android mobile app</strong> for automated loan processing, document verification, and disbursement tracking. Implemented role-based dashboards, real-time status tracking, and secure document management system.
+            </div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> React.js, Redux, Material UI, Capacitor, TypeScript, FastAPI, MySQL, Azure App Services</div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Rule.ai — Business Rule Engine</div>
+            <div class="project-desc">
+                Enterprise-grade rule engine for complex business logic management with <strong>visual rule builder</strong>, versioning system, and real-time execution engine. Supports multi-tenant architecture with comprehensive audit trails.
+            </div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> React.js, TypeScript, FastAPI, MongoDB, Redis, Azure</div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">SmartCredit — Lending Decision & Risk Scoring Engine</div>
+            <div class="project-desc">
+                Full-stack credit scoring and decisioning platform with ML-based risk assessment. Features include dynamic rule builder UI, real-time decision engine, multi-tenant dashboards, automated PDF report generation, and comprehensive analytics with role-based access control.
+            </div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> Next.js, FastAPI, Golang, PostgreSQL, Machine Learning Models, Azure</div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">AI Wellness Monitor — Computer Vision Productivity Assistant</div>
+            <div class="project-desc">
+                Cross-platform desktop application with real-time face-touch detection, posture monitoring, and blink-rate tracking. Built optimized CV engine with TensorFlow/OpenCV and cloud analytics dashboard featuring habit tracking, smart alerts, and productivity trends visualization.
+            </div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> TensorFlow, OpenCV, Electron, React, FastAPI, Python</div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">InsightHub — AI-Powered Analytics & Auto-Reporting Platform</div>
+            <div class="project-desc">
+                SaaS platform that transforms raw CSV data into actionable insights, interactive dashboards, and predictive analytics. Features automated data cleaning pipeline, ML forecasting, anomaly detection, and auto-generated PDF reports with visualizations.
+            </div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> Next.js, FastAPI, scikit-learn, Prophet, PostgreSQL, Azure, Redis Caching</div>
+        </div>
+
+        <div class="project-item">
+            <div class="project-title">Corporate Website with CMS & SEO Optimization</div>
+            <div class="project-desc">
+                Modern corporate website featuring dynamic content management system, blog platform, and comprehensive SEO optimization with Google Tag Manager integration for advanced analytics tracking and conversion monitoring.
+            </div>
+            <div class="tech-stack"><strong>Tech Stack:</strong> Next.js, FastAPI, TypeScript, Tailwind CSS, GTM, SEO Best Practices</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        
+        <div class="education-item">
+            <div class="education-header">
+                <div class="school-name">Rajagiri School of Engineering and Technology, Kakkanad</div>
+                <div class="location-date">2020 - 2024</div>
+            </div>
+            <div class="degree">Bachelor of Technology (B.Tech) in Information Technology</div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-header">
+                <div class="school-name">Viswajyothi CMI Public School, Angamaly</div>
+                <div class="location-date">2019 - 2020</div>
+            </div>
+            <div class="degree">CBSE, Senior Secondary (Class XII)</div>
+        </div>
+
+        <div class="education-item">
+            <div class="education-header">
+                <div class="school-name">Viswajyothi CMI Public School, Angamaly</div>
+                <div class="location-date">2017 - 2018</div>
+            </div>
+            <div class="degree">CBSE, High School (Class X)</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        <ul class="certifications">
+            <li>Data Foundations - Industry Certification</li>
+            <li>Working with React and Go (Golang) - Professional Development</li>
+            <li>Kubernetes & Docker Essentials - Udemy</li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,65 +1,139 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const projects = [
+    {
+      title: "AutoFlow — AI-Driven Workflow Automation Platform",
+      desc: "Zapier-like workflow builder with drag-and-drop UI, rule engine, scheduling, retries, and webhooks.",
+      tech: "React, React Flow, TypeScript, FastAPI, Golang, Azure, Docker",
+    },
+    {
+      title: "SmartCredit — Lending Decision & Risk Scoring Engine",
+      desc: "Full-stack credit scoring engine with rule builder, ML scoring, dashboards, and audits.",
+      tech: "Next.js, FastAPI, Golang, PostgreSQL, ML Models, Azure",
+    },
+    {
+      title: "AI Wellness Monitor",
+      desc: "Real-time CV engine that alerts for face-touching, tracks posture & blink rate, with a cloud-linked analytics dashboard.",
+      tech: "TensorFlow, OpenCV, Electron, React, FastAPI",
+    },
+    {
+      title: "InsightHub — AI Analytics & Auto-Reporting Suite",
+      desc: "Uploads datasets → generates dashboards, anomaly detection, forecasting, and PDF reports.",
+      tech: "Next.js, FastAPI, Prophet, PostgreSQL, Azure",
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main className="px-6 md:px-20 lg:px-40 py-20 text-gray-800">
+      {/* HERO */}
+      <section className="mb-24">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-5xl font-bold mb-4"
+        >
+          Hi, I'm <span className="text-blue-600">Tanya Sony</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-xl max-w-2xl leading-relaxed"
+        >
+          Full-stack oriented Frontend Developer with 2+ years building
+          enterprise-scale applications at Corestrat. Skilled in React, Next.js,
+          TypeScript, Golang, Python, Azure deployments, and AI-driven product
+          engineering. I build clean, scalable systems that solve real problems at scale.
+        </motion.p>
+      </section>
+
+      {/* PROJECTS */}
+      <section className="mb-24" id="projects">
+        <h2 className="text-3xl font-semibold mb-8">Projects</h2>
+
+        <div className="space-y-10">
+          {projects.map((p, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              <h3 className="text-2xl font-semibold mb-2">{p.title}</h3>
+              <p className="mb-2 text-gray-700">{p.desc}</p>
+              <p className="text-sm text-gray-500">
+                <strong>Tech:</strong> {p.tech}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section className="mb-24" id="experience">
+        <h2 className="text-3xl font-semibold mb-6">Experience</h2>
+
+        <div className="border border-gray-200 rounded-xl p-6 shadow-sm">
+          <h3 className="text-xl font-bold">Corestrat, Bangalore</h3>
+          <p className="text-gray-600 font-medium mb-2">
+            Frontend Developer (Aug 2023 – Present)
           </p>
+          <p className="text-gray-600 font-medium mb-4">
+            Frontend Developer Intern (Feb 2023 – Aug 2023)
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <li>Reduced UI bugs by ~90% through scalable React/Next.js architectures.</li>
+            <li>Built form engines, workflow editors, and role-based dashboards.</li>
+            <li>Developed Python & Golang microservices for automation & validation.</li>
+            <li>Optimized performance using memoization, lazy loading, pagination.</li>
+            <li>Deployed applications to Azure App Services with CI/CD pipelines.</li>
+          </ul>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* SKILLS */}
+      <section className="mb-24" id="skills">
+        <h2 className="text-3xl font-semibold mb-6">Skills</h2>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
+            <h4 className="font-bold mb-2">Frontend</h4>
+            <p>React, Next.js, TypeScript, Redux, Tailwind, MUI</p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-2">Backend</h4>
+            <p>Golang (Gin/Fiber), Python (FastAPI), Node.js</p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-2">Cloud & DevOps</h4>
+            <p>Azure App Services, Docker, GitHub Actions, Linux</p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-2">Databases</h4>
+            <p>MySQL, MongoDB, Redis</p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-2">AI/ML</h4>
+            <p>TensorFlow, OpenCV, scikit-learn, Forecasting Models</p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-2">Soft Skills</h4>
+            <p>Teamwork, Communication, Ownership, Problem-Solving</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* CONTACT */}
+      <section className="text-center py-10" id="contact">
+        <h2 className="text-3xl font-semibold mb-4">Let’s Connect</h2>
+        <p className="text-gray-600">Email: yourname@gmail.com</p>
+        <p className="text-gray-600 mt-2">LinkedIn | GitHub | Portfolio</p>
+      </section>
+    </main>
   );
 }
